@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<h1 th:text="'Welcome '+ ${user.username}"></h1>
+<img th:src="@{https://180dc.org/wp-content/uploads/2016/08/default-profile.png}"/>
+<ul  >
+
+    <li th:text="'User Name: ' + ${user.username}"></li>
+    <li th:text="'First Name: ' + ${user.firstName}"></li>
+    <li th:text="'Last Name: ' + ${user.lastName}"></li>
+    <li th:text="'Date Of Birth: ' + ${user.dateOfBirth}"></li>
+    <li th:text="'Biography: ' + ${user.bio}"></li>
+
+
+</ul>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+</body>
+</html>
